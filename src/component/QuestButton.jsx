@@ -28,7 +28,7 @@ export default function QuestButton({ question }) {
       {items.map((item) => (
         <button
           className="response"
-          
+          onChange={selectResponse === item.quest ? "" : setSelectResponse("")}
           onClick={() => setSelectResponse(item.text)}
           style={
             selectResponse === item.text
