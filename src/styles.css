@@ -1,0 +1,145 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: Poppins;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 450px;
+  overflow: hidden;
+}
+
+/*  Style box blur  */
+.form {
+  width: 90%;
+  height: 80%;
+  background: white;
+  opacity: 90%;
+  border-radius: 10px;
+  position: absolute;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+/* fond d'écran */
+.backgroundImage {
+  height: 120%;
+  position: relative;
+}
+
+/* Titre */
+.form h1 {
+  margin-top: 15px;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+/* Photo utilisateur */
+.picture {
+  position: relative;
+  overflow: hidden;
+  border-radius: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 130px;
+  height: 130px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+  padding: 10px;
+}
+.picture.active {
+  animation: 1s linear infinite alternate pictureHeart;
+  border: 3px solid #f73b45;
+}
+
+@keyframes pictureHeart {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.picture::-webkit-file-upload-button {
+  display: none;
+}
+.preview {
+  width: 100%;
+}
+
+/* Prénom utilisateur */
+.inputNew {
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+/* Envoi des données */
+.valider {
+  padding: 10px;
+  background: #f73b45;
+  color: white;
+  font-weight: bold;
+  border: transparent;
+  margin-left: 15px;
+  border-radius: 5px;
+}
+
+.iconUser {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #000;
+}
+
+.topMenu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.refreshIcon {
+  transform-origin: center;
+  animation: 2s refreshAnim 0s infinite;
+}
+
+@keyframes refreshAnim {
+  0% {
+    scale: 0.8;
+    opacity: 0.7;
+  }
+  50% {
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    scale: 0.8;
+    opacity: 0.7;
+  }
+}
+
+.response {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 5px;
+  font-size: 22px;
+  border-radius: 5px;
+  outline-style: none;
+  border: 1px solid grey;
+  color: #000;
+}
