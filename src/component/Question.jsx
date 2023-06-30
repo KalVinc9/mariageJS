@@ -32,7 +32,7 @@ export default function Question() {
     setInterval(() => {
       setLoading(true);
       getData();
-    }, 5000);
+    }, 6000);
     setLoading(false);
   }, [loading]);
 
